@@ -109,7 +109,24 @@ function grafico(date, confirmed, recovered, deaths) {
         label: "Infectados",
         borderColor: "#3e95cd",
         fill: false
-      }, {
+      }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Panorâma do Covid-19'
+      }
+    },
+
+  });
+
+  new Chart(document.getElementById("covidComp"), {
+
+    type: 'line',
+    data: {
+      labels: date,
+      datasets: [{
         data: recovered,
         label: "Recuperados",
         borderColor: "#3cba9f",
